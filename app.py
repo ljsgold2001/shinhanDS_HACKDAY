@@ -8,6 +8,9 @@ import platform
 from dotenv import load_dotenv
 load_dotenv()  # ← .env 파일 로딩
 
+print("✅ SSH_USERNAME:", os.getenv("SSH_USERNAME"))
+print("✅ SSH_PASSWORD:", os.getenv("SSH_PASSWORD"))
+
 from openai import OpenAI
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))  # ← 환경변수에서 불러오기
 
@@ -101,7 +104,7 @@ def analyze_logs_with_ai(log_text):
 
 {summary}
 """
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "당신은 인프라 운영 전문가입니다."},
