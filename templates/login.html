@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Swing Chat 로그인</title>
+  <link href="https://fonts.googleapis.com/css2?family=SUIT&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'SUIT', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 20px;
+    }
+    .logo {
+      width: 180px;
+      margin-bottom: 30px;
+    }
+    .select-wrap, input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #4b4be7;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .login-btn:hover {
+      background-color: #3737d4;
+    }
+    .link {
+      margin-top: 10px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="/static/swingchat_logo.png" class="logo" alt="Swing Chat Logo">
+    <form method="POST">
+      <select name="company" class="select-wrap" required>
+        <option value="신한금융지주" selected>신한금융지주</option>
+        <option value="신한은행">신한은행</option>
+        <option value="신한DS">신한DS</option>
+      </select>
+      <input type="text" name="userid" placeholder="사번" required>
+      <input type="password" name="password" placeholder="비밀번호" required>
+      <button class="login-btn" type="submit">로그인</button>
+    </form>
+    <div class="link">비밀번호 변경</div>
+  </div>
+</body>
+</html>
