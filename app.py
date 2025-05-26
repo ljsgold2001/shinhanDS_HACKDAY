@@ -10,7 +10,7 @@ load_dotenv()  # ← .env 파일 로딩
 #test
 print("✅ SSH_USERNAME:", os.getenv("SSH_USERNAME"))
 print("✅ SSH_PASSWORD:", os.getenv("SSH_PASSWORD"))
-
+#seongcheol
 from openai import OpenAI
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))  # ← 환경변수에서 불러오기
 
