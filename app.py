@@ -7,7 +7,7 @@ import platform
 
 from dotenv import load_dotenv
 load_dotenv()  # ← .env 파일 로딩
-
+#test
 print("✅ SSH_USERNAME:", os.getenv("SSH_USERNAME"))
 print("✅ SSH_PASSWORD:", os.getenv("SSH_PASSWORD"))
 
