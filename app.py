@@ -101,7 +101,7 @@ def analyze_logs_with_ai(log_text):
 
     prompt = f"""
 다음은 리눅스 시스템의 /var/log/messages 로그입니다. 이 로그에서 에러나 경고, 문제의 원인으로 보이는 내용을 요약해서 설명해 주세요. 한국어로 간단하게 줄바꿈해서 표현해 주세요:
-
+# git test
 {summary}
 """
     response = client.chat.completions.create(
